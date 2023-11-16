@@ -14,7 +14,19 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <!-- Login Form -->
+    <form id="login-form" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+      <div class="form-item">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+      <div class="form-item">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+      <div class="form-item">
+        <button type="submit">Iniciar sesión</button>
+      </div>
+    </form>
   </div>
 </ion-content>
